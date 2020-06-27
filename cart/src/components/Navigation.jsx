@@ -8,11 +8,11 @@ class Navigation extends React.Component{
     }
     render(){
         return(
-            <div >
-                <Link to ="/" >Home |</Link>
-                <Link to ="/products" >products |</Link>
-                <Link to ="/about" >about |</Link>
-                <Link to ="/contact" >contact |</Link>
+            <div style= {{padding:10,marginTop:20,marginLeft:50}} >
+                <Link to ="/" style= {{padding:10}}>Home |</Link>
+                <Link to ="/products" style= {{padding:10}} >products |</Link>
+                <Link to ="/login" style= {{padding:10}}>login |</Link>
+                <Link to ="/cart" style= {{padding:10}}>cart |</Link>
             </div>
         )
     }

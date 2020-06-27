@@ -1,8 +1,8 @@
 import React from 'react'
 import {Route,Link,Switch} from 'react-router-dom'
-import Navigation from './Navigation'
-
 import Home from './Home'
+import Cart from './Cart'
+import Login from './Login'
 
 const Products = () =>{
     return(
@@ -38,15 +38,15 @@ class Routing extends React.Component{
     }
 
     render(){
-
+        const { app } = this.props
+        console.log(this.props)
         return(
             <div>
-                <Navigation />
                 <Switch>
-                    <Route path = "/" exact component={Home} />
+                    <Route path = "/" exact render={(...props)=><Home {...props} app = {app}/>} />
                     <Route path = "/products"  component={Products} />
-                    <Route path = "/about"  component={About} />
-                    <Route path = "/contact" component={Contact} />
+                    <Route path = "/login"  component={Login} />
+                    <Route path = "/cart" render={(...props)=><Cart {...props} app = {app}/>} />
                 </Switch>
                 
             </div>
