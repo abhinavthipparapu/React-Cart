@@ -45,7 +45,7 @@ class Routing extends React.Component{
                 <Switch>
                     <Route path = "/" exact render={(...props)=><Home {...props} app = {app}/>} />
                     <Route path = "/products"  component={Products} />
-                    <Route path = "/login"  component={Login} />
+                    <Route path = "/login" render={(...props)=><Login {...props} app = {app}/>}  />
                     <Route path = "/cart" render={(...props)=><Cart {...props} app = {app}/>} />
                 </Switch>
                 

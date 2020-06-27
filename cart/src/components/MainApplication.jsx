@@ -7,10 +7,20 @@ class MainApplication extends Component {
         super(props);
         this.state ={
             cartArray :[],
-            isAuth : false
+            isAuth : false,
+            users : [{
+                name :"admin",
+                password : "admin" 
+            },
+            {
+                name :"abhinav",
+                password : "abhinav"  
+            }
+        ]
         }
         
     }
+ //Authentication
 
     isAuthentication =()=>{
         if(this.state.isAuth){
@@ -19,8 +29,27 @@ class MainApplication extends Component {
             return false
         }
     }
-    //Authentication
+    //user verification
 
+    userVerification = ({name, password})=>{
+        let {users} = this.state
+        // console.log(users)
+        var flag = false
+        for(var i=0;i<users.length;i++){
+            if(users[i].name == name && users[i].password == password){
+                flag =true
+                console.log("successful login")
+                this.setState({
+                    isAuth:true
+                })
+            }
+        }
+        if(flag == false){
+            console.log("Enter correct credentials")
+            alert("please enter correct credentials")
+        }
+    }
+   
     addToCart = (payload)=>{
         if(!this.isAuthentication()){
             alert("you must have login first")
@@ -64,7 +93,8 @@ class MainApplication extends Component {
         let methods = {
             addToCart:this.addToCart,
             getTheCartArray:this.getTheCartArray,
-            isAuthentication:this.isAuthentication
+            isAuthentication:this.isAuthentication,
+            userVerification : this.userVerification
         }
         return (
             <div>
