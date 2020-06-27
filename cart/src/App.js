@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter} from 'react-router-dom'
 import './App.css';
-
+import Routing from './components/Routing'
 function App() {
   return (
     <div className="App">
-      Hello
+      <BrowserRouter>
+        <Routing />
+      </BrowserRouter>
     </div>
   );
 }

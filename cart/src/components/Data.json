@@ -1,0 +1,8 @@
+[{"id":1, "name":"shoe","img":"https://via.placeholder.com/150","price":500},
+{"id":2, "name":"shirt","img":"https://via.placeholder.com/150","price":400},
+{"id":3, "name":"trouser","img":"https://via.placeholder.com/150","price":600},
+{"id":4, "name":"jeans","img":"https://via.placeholder.com/150","price":700},
+{"id":5, "name":"caps","img":"https://via.placeholder.com/150","price":100},
+{"id":6, "name":"blazer","img":"https://via.placeholder.com/150","price":900},
+{"id":7, "name":"jacket","img":"https://via.placeholder.com/150","price":1500}
+]
